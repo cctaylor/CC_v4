@@ -1,6 +1,10 @@
 CCV4::Application.routes.draw do
 	
+  get "quotes/new"
+
 	root to: 'static_pages#home'
+
+  match '/quote', to: 'quotes#new'
 
 	match '/services',		to: 'static_pages#services'
 	match '/customers',		to: 'static_pages#customers'

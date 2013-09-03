@@ -1,5 +1,6 @@
 // Required global settings and mixins for Foundation
-@import "foundation/foundation-global";
+@import "foundation/variables";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700italic);
 
 // Settings file to override Foundation variables
 
@@ -15,9 +16,9 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #F4F4F4;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-family: "Lato", Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -85,7 +86,7 @@
 //
 
 // We use these to control header font styles
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Trebuchet MS", Helvetica, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -968,18 +969,18 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: #A60000;
 
 // Height and margin
 // $topbar-height: 45px;
-// $topbar-margin-bottom: emCalc(30px);
+$topbar-margin-bottom: 0;
 
 // Control Input height for top bar
 // $topbar-input-height: 2.45em;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17px);
+// $topbar-title-font-size: emCalc(24px);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
@@ -1009,4 +1010,5 @@
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 
+@import 'custom';
 @import 'foundation';

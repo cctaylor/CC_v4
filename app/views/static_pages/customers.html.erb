@@ -1,2 +1,23 @@
-<h1>StaticPages#customers</h1>
-<p>Find me in app/views/static_pages/customers.html.erb</p>
+<%= provide(:title, "Contact Us") %>
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Contact Us</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="large-10 large-offset-1 columns">
+
+	</div>
+</div>
+<div class="row">
+	<div class="large-10 large-offset-1 columns">
+		<%= gmaps({ "direction" => {
+			"data" 		=> { "from" => "5328 Tate Ave 75093", "to" => "5850 Town and Country Blvd. Ste 702 Frisco, TX 75034"},
+			"options"	=> { "display_panel" => true, "panel_id" => "instructions"}
+		}}) %>
+	</div>
+</div>
+<div class="row">
+	<div class="large-10 large-offset-1 columns" id="instructions">
+	</div>
+</div>

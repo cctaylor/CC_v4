@@ -12,5 +12,8 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    
+
+    @json = Gmaps4rails.geocode("5328 Tate Ave 75093").to_json
   end
 end

@@ -1,0 +1,131 @@
+$lightGray: #AAA;
+$lighterGray: #CCC;
+$CTA: #9FEE00;
+
+
+.CTA {
+	background-color: $CTA;
+}
+
+.lighterGray {
+	background-color: $lighterGray;
+}
+
+.thinSpacerRow {
+	height: emCalc(10px);
+}
+
+#mainMarquee {
+	padding: 10px;
+	background-color: white;
+}
+
+#mainMarquee ul {
+	padding-left: 25px;
+}
+
+#cigarBand {
+	background-color: #C9F76F;
+	padding: emCalc(5px) 0;
+	text-align: center;
+}
+
+#cigarBand h3 {
+	font-style: italic;
+	font-size: emCalc(20px);
+	padding: 0;
+	margin: 0;
+}
+
+.miniMarquee {
+	border: solid 1px black;
+	height: emCalc(200px);
+}
+
+.miniMarquee h3 {
+	text-align: center;
+	font-size: emCalc(14px);
+}
+
+#quoteBox {
+	background-color: white;
+	text-align: center;
+	margin-top: emCalc(10px);
+}
+
+#addressBlock {
+	text-align: right;
+	font-size: emCalc(14px);
+	padding: 0;
+	margin: emCalc(10px) 0;
+	line-height: 125%;
+}
+
+#foot {
+	padding-top: emCalc(15px);
+	text-align: center;
+	font-size: emCalc(12px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#globalTitle {
+	margin: 0 0 0 0;
+	line-height: 75%;
+}
+
+#globalTitle h1 {
+	font-size: emCalc(32px);
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+
+	a, a.visited {
+		color: black;
+	}
+}
+
+#globalTitle h2 {
+	font-size: emCalc(16px);
+	margin: 0;
+	padding: 0;
+}
+
+.prodDesc {
+	background-color: white;
+}
+
+.prodDesc h3 {
+	font-size: emCalc(16px);
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.prodDesc img {
+	padding: 0;
+	margin: 0;
+}
+
+.prodDesc p {
+	font-size: emCalc(14px);
+	padding: 0;
+	margin: 0;
+}
+
+.prodDesc ul {
+	padding: 0;
+	margin: 0 0 0 emCalc(25px);
+}
+
+.prodDesc li {
+	font-size: emCalc(14px);
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+}
+
+#signature {
+	text-align: right;
+}

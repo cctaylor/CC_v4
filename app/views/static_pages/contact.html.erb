@@ -1,2 +1,27 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<%= provide(:title, "Contact Us") %>
+<div class="row">
+	<div class="large-12 columns">
+		<h1>Contact Us</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="large-10 large-offset-1 columns">
+		<%= form_for(@json) do |f| %>
+
+			<%= f.label :origin %>
+			<%= f.text_field :origin %>
+
+			<%= f.label :destination %>
+			<%= f.text_field :destination %>
+
+			<%= f.submit "Get directions", class: "button" %>
+
+		<% end %>
+
+	</div>
+</div>
+<div class="row">
+	<div class="large-10 large-offset-1 columns">
+		<%= gmaps4rails(@json) %>
+	</div>
+</div>
