@@ -1,7 +1,14 @@
 $lightGray: #AAA;
 $lighterGray: #CCC;
+$grayMediumLight: #eaeaea;
 $CTA: #9FEE00;
 
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 .CTA {
 	background-color: $CTA;
@@ -128,4 +135,32 @@ $CTA: #9FEE00;
 
 #signature {
 	text-align: right;
+}
+
+
+
+/*  miscellaneous  */
+
+.debug_dump {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin: 45px auto;
+	@include box_sizing;
+}
+
+
+/* forms */
+
+#error_explanation {
+	color: #f00;
+	ul {
+		list-style: none;
+		margin: 0 0 18px 0;
+	}
+}
+
+.field_with_errors {
+	@extend .control_group;
+	@extend .error;
 }
