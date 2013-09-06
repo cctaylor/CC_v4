@@ -1,0 +1,28 @@
+<%= provide(:title, 'Create a new user') %>
+<h1>Create a new user</h1>
+
+<div class="row">
+	<div class="large-10 large-offset-1 columns">
+		<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages', object: f.object %>
+
+			<%= f.label :name_first %>
+			<%= f.text_field :name_first %>
+
+			<%= f.label :name_last %>
+			<%= f.text_field :name_last %>
+
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+
+			<%= f.label :password_confirmation, "Confirmation" %>
+			<%= f.password_field :password_confirmation %>
+
+			<%= f.submit "Create account", class: "button" %>
+
+		<% end %>
+	</div>
+</div>

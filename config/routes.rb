@@ -1,8 +1,10 @@
 CCV4::Application.routes.draw do
+  resources :users
   resources :quotes
 
 	root to: 'static_pages#home'
 
+  match 'signup', to: 'users#new'
   match '/rfq', to: 'quotes#new'
 
 	match '/services',		to: 'static_pages#services'
