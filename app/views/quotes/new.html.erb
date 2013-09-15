@@ -1,45 +1,79 @@
 <%= provide(:title, "Request a quote") %>
 <h1>Request a quote</h1>
 
-<div class="row">
-	<div class="large-10 large-offset-1 columns">
-		<%= form_for(@quote) do |f| %>
-			<%= render 'shared/error_messages', object: f.object %>
-
-			<%= f.label :name_first %>
-			<%= f.text_field :name_first %>
-
-			<%= f.label :name_last %>
-			<%= f.text_field :name_last %>
-
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-
-			<%= f.label :phone %>
-			<%= f.text_field :phone %>
-
-			<%= f.label :item %>
-			<%= f.text_field :item %>
-
-			<%= f.label :color1 %>
-			<%= f.text_field :color1 %>
-
-			<%= f.label :color2 %>
-			<%= f.text_field :color2 %>
-
-			<%= f.label :paper %>
-			<%= f.text_field :paper %>
-
-			<%= f.label :fold %>
-			<%= f.text_field :fold %>
-
-			<%= f.label :quantity %>
-			<%= f.text_field :quantity %>
-
-			<%= f.label :message %>
-			<%= f.text_field :message %>
-
-			<%= f.submit "Submit your request", class: "button" %>
-		<% end %>
+<%= form_for @quote, :html => {:class => 'custom'} do |f| %>
+	<div class="row">
+		<div class="large-10 large-offset-1 columns">
+				<%= render 'shared/error_messages', object: f.object %>
+		</div>
 	</div>
-</div>
+
+	<fieldset><legend>Contact Information</legend>
+		<div class="row">
+			<div class="large-6 columns">
+				<%= f.label :name_first, "First Name" %>
+				<%= f.text_field :name_first %>
+			</div>
+			<div class="large-6 columns">
+				<%= f.label :name_last, "Last Name" %>
+				<%= f.text_field :name_last %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-6 columns">
+				<%= f.label :email, "Email Address" %>
+				<%= f.text_field :email %>
+			</div>
+			<div class="large-6 columns">
+				<%= f.label :phone, "Phone Number" %>
+				<%= f.text_field :phone %>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset><legend>Job Details</legend>
+		<div class="row">
+			<div class="large-4 columns">
+				<%= f.label :item, "Item to print" %>
+				<%= f.select(:item, Quote::ITEM_TYPES) %>
+			</div>
+			<div class="large-4 columns">
+				<%= f.label :paper, "Paper type" %>
+				<%= f.select(:paper, Quote::PAPER_TYPES) %>
+			</div>
+			<div class="large-4 columns">
+				<%= f.label :fold, "Folding (if any)" %>
+				<%= f.select(:fold, Quote::FOLD_TYPES) %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<%= f.label :color1, "Color - front side" %>
+				<%= f.select(:color1, Quote::COLOR_TYPES) %>
+			</div>
+			<div class="large-4 columns">
+				<%= f.label :color2, "Color - back side (if any)" %>
+				<%= f.select(:color2, Quote::COLOR_TYPES_BACK) %>
+			</div>
+			<div class="large-4 columns">
+				<%= f.label :quantity, "Quantity" %>
+				<%= f.select(:quantity, Quote::QUANTITY_TYPES) %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<%= f.label :message, "Any additional instructions, questions, etc." %>
+				<%= f.text_area :message, id: "commentBox" %>
+			</div>
+		</div>
+	</fieldset>
+
+		<div class="row">
+			<div class="large-2 large-centered small-centered columns">
+				<%= f.submit "Submit your request", class: "small button" %>
+			</div>
+		</div>
+<% end %>

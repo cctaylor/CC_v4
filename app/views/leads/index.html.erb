@@ -1,0 +1,19 @@
+<% provide(:title, 'All leads') %>
+<h1>All leads</h1>
+
+<%= will_paginate %>
+
+<div class="row">
+	<div class="large-1 large-offset-1 columns">ID</div>
+	<div class="large-3 columns">Customer name</div>
+	<div class="large-2 columns">Email</div>
+	<div class="large-2 columns">Phone</div>
+	<div class="large-1 columns">Created</div>
+	<div class="large-2 columns"></div>
+
+</div>
+<ul class="leads">
+		<%= render @leads %>
+</ul>
+
+<%= will_paginate %>

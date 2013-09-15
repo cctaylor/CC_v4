@@ -1,0 +1,31 @@
+<%= form_for @lead, :html => {:class => 'custom'} do |f| %>
+<fieldset>
+	<legend>Request a Quote / Contact Us</legend>
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.text_field :name_first, placeholder: "First Name" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.text_field :name_last, placeholder: "Last Name" %>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.text_field :email, placeholder: "Email address" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.text_field :phone, placeholder: "Phone Number" %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.submit "Continue", class: "small button" %>
+		</div>
+	</div>
+</fieldset>
+<% end %>

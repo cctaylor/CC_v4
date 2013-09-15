@@ -1,0 +1,20 @@
+<li>
+	<div class="row">
+		<div class="large-1 large-offset-1 columns">
+			<%= link_to lead.id, lead %>
+		</div>
+		<div class="large-3 columns">
+			<%= "#{lead.name_last}, #{lead.name_first}" %>
+		</div>
+		<div class="large-2 columns">
+			<%= lead.email %>a
+		</div>
+		<div class="large-2 columns">
+			<%= lead.phone %>a
+		</div>
+		<div class="large-1 columns">
+			<%= l lead.created_at, format: :short %>
+		</div>
+		<div class="large-2 columns"></div>
+	</div>
+</li>

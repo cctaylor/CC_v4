@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @lead = Lead.new
   end
 
   def services
@@ -12,8 +13,6 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
-    
-
     @json = Gmaps4rails.geocode("5328 Tate Ave 75093").to_json
   end
 end

@@ -1,6 +1,9 @@
 CCV4::Application.routes.draw do
+  get "leads/new"
+
   resources :users
   resources :quotes
+  resources :leads
   resources :sessions, only: [:new, :create, :destroy]
 
 	root to: 'static_pages#home'
@@ -9,6 +12,7 @@ CCV4::Application.routes.draw do
   match 'signin', to: 'sessions#new'
   match 'signout', to: 'sessions#destroy', via: :delete
   match '/rfq', to: 'quotes#new'
+
 
 	match '/services',		to: 'static_pages#services'
 	match '/customers',		to: 'static_pages#customers'

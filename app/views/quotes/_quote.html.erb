@@ -1,0 +1,20 @@
+<li>
+	<div class="row">
+		<div class="large-1 large-offset-1 columns">
+			<%= link_to quote.id, quote %>
+		</div>
+		<div class="large-3 columns">
+			<%= "#{quote.name_last}, #{quote.name_first}" %>
+		</div>
+		<div class="large-2 columns">
+			<%= quote.item %>a
+		</div>
+		<div class="large-1 columns">
+			<%= l quote.created_at, format: :short %>
+		</div>
+		<div class="large-1 columns">
+			<%= l quote.updated_at, format: :short %>
+		</div>
+		<div class="large-2 columns"></div>
+	</div>
+</li>

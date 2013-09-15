@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908024340) do
+ActiveRecord::Schema.define(:version => 20130913220122) do
+
+  create_table "leads", :force => true do |t|
+    t.string   "name_first"
+    t.string   "name_last"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "status"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "remember_token"
+  end
+
+  add_index "leads", ["remember_token"], :name => "index_leads_on_remember_token"
 
   create_table "quotes", :force => true do |t|
     t.string   "name_first"

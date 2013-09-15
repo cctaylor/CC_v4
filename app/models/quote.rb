@@ -27,4 +27,11 @@ class Quote < ActiveRecord::Base
 	validates :name_last, presence: true, length: { maximum: 25 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
+
+	ITEM_TYPES = ["Flyer", "Brochure", "Postcard", "Business card", "Notecard"]
+	COLOR_TYPES = ["Color", "Black and white"]
+	COLOR_TYPES_BACK = ["None (1-sided)", "Color", "Black and white"]
+	PAPER_TYPES = ["Standard copy paper (28#)", "Gloss text", "Matte cardstock", "Gloss cardstock"]
+	FOLD_TYPES = ["None", "Half fold", "Tri-fold"]
+	QUANTITY_TYPES = [50, 100, 250, 500, 1000, 2000]
 end
